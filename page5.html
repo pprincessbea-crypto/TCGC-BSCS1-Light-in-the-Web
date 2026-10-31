@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education, Faith and Technology | Light in the Web</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background: #f3f8f0;
+                color: #354b38;
+                line-height: 1.7;
+            }
+
+            .main-header {
+                background: #315b3b;
+                color: white;
+                padding: 20px 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .main-header h1 {
+                letter-spacing: 2px;
+                font-size: 25px;
+                white-space: nowrap;
+            }
+
+            .main-header nav {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 20px;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .main-header nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: bold;
+                white-space: nowrap;
+                transition: 0.3s;
+            }
+
+            .main-header nav a:hover {
+                color: #c8e6c0;
+            }
+
+            .page-heading {
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .page-heading h2 {
+                color: #315b3b;
+                font-size: 30px;
+            }
+
+            .container {
+                max-width: 1050px;
+                margin: auto;
+                padding: 20px;
+            }
+
+            .section-title {
+                text-align: center;
+                background: #315b3b;
+                color: white;
+                padding: 25px 15px;
+                border-radius: 15px;
+                margin: 35px 0 25px;
+            }
+
+            .section-title h1 {
+                font-size: 27px;
+                letter-spacing: 1px;
+            }
+
+            .section-title p {
+                margin-top: 8px;
+            }
+
+            .intro {
+                background: white;
+                padding: 25px;
+                border-radius: 15px;
+                text-align: center;
+                margin-bottom: 25px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            }
+
+            .info-card {
+                background: white;
+                padding: 25px;
+                margin-bottom: 22px;
+                border-radius: 15px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+                transition: 0.3s;
+            }
+
+            .info-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 7px 16px rgba(0,0,0,0.12);
+            }
+
+            .info-card h2 {
+                color: #315b3b;
+                margin-bottom: 10px;
+            }
+
+            .info-card ul {
+                padding-left: 25px;
+            }
+
+            .verse {
+                background: white;
+                border-left: 5px solid #315b3b;
+                padding: 25px;
+                text-align: center;
+                border-radius: 10px;
+                margin: 25px 0;
+            }
+
+            .faith-message {
+                background: #dcebd8;
+                padding: 30px;
+                border-radius: 15px;
+                text-align: center;
+                margin: 30px 0;
+            }
+
+            .closing {
+                background: #315b3b;
+                color: white;
+                padding: 40px 25px;
+                text-align: center;
+                border-radius: 15px;
+                margin: 35px 0;
+            }
+
+            footer {
+                background: #315b3b;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                margin-top: 30px;
+            }
+
+            @media(max-width: 850px) {
+                .main-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .main-header nav {
+                    width: 100%;
+                    justify-content: flex-start;
+                }
+            }
+
+            @media(max-width: 600px) {
+                .section-title h1 {
+                    font-size: 21px;
+                }
+
+                .page-heading h2 {
+                    font-size: 24px;
+                }
+
+                .container {
+                    padding: 15px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+    <header class="main-header">
+
+        <h1>LIGHT IN THE WEB</h1>
+
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="Untitled-1.html">REFLECTION</a>
+            <a href="page3.html">ADVOCACY</a>
+            <a href="page4.html">PORTFOLIO</a>
+            <a href="page5.html">MORE</a>
+            <a href="index.html">LOG OUT</a>
+        </nav>
+    </header>
+
+    <section class="page-heading">
+
+        <h2>LEARNING, FAITH & TECHNOLOGY</h2>
+
+        <p>Using Digital Knowledge to Inspire and Make a Difference</p>
+
+    </section>
+
+    <main class="container">
+
+        <div class="section-title">
+
+            <h1>EDUCATIONAL / INFORMATIONAL PAGE</h1>
+
+            <p>Promoting Moral and Ethical Digital Practices</p>
+
+        </div>
+
+        <div class="intro">
+
+            <h2>Introduction</h2>
+
+            <p>
+                The internet gives us many opportunities to learn, communicate,
+                and express ourselves. However, being a responsible digital
+                citizen means knowing how to use technology with honesty,
+                kindness, and respect for others.
+            </p>
+
+        </div>
+
+        <section class="info-card">
+
+            <h2>1. Online Kindness</h2>
+
+            <p>
+                Kindness should not only be practiced in person but also online.
+                Every comment, message, and post can affect someone.
+                We should use our words to encourage others instead of
+                spreading negativity or hurting their feelings.
+            </p>
+
+            <ul>
+                <li>Think before commenting or posting.</li>
+                <li>Respect different opinions.</li>
+                <li>Avoid cyberbullying and harmful messages.</li>
+                <li>Use social media to spread encouragement.</li>
+            </ul>
+
+        </section>
+
+        <section class="info-card">
+
+            <h2>2. Honesty in Digital Creation</h2>
+
+            <p>
+                Honesty is important when creating and sharing digital content.
+                We should give proper credit to original creators and avoid
+                claiming other people's work as our own.
+            </p>
+
+            <ul>
+                <li>Give credit to original sources.</li>
+                <li>Avoid plagiarism and copying without permission.</li>
+                <li>Share accurate and truthful information.</li>
+                <li>Be honest when presenting your own work.</li>
+            </ul>
+
+        </section>
+
+        <section class="info-card">
+
+            <h2>3. Responsible Internet Use</h2>
+
+            <p>
+                Using the internet responsibly means protecting our privacy,
+                checking information before sharing it, and making good
+                decisions while browsing online.
+            </p>
+
+            <ul>
+                <li>Keep passwords and personal information private.</li>
+                <li>Check if information comes from reliable sources.</li>
+                <li>Avoid suspicious links and websites.</li>
+                <li>Use technology for learning and productive activities.</li>
+            </ul>
+
+        </section>
+
+        <div class="section-title">
+
+            <h1>FAITH AND TECHNOLOGY INTEGRATION</h1>
+
+            <p>Spreading Positivity and Spiritual Messages Through Technology</p>
+
+        </div>
+
+        <div class="verse">
+
+            <h2>Matthew 5:16</h2>
+
+            <p>
+                <em>
+                    "Let your light shine before others, that they may see
+                    your good deeds and glorify your Father in heaven."
+                </em>
+            </p>
+
+        </div>
+
+        <section class="info-card">
+
+            <h2>1. Using Technology to Spread Positivity</h2>
+
+            <p>
+                Technology allows us to connect with people and share messages
+                with a wider audience. We can use social media and digital
+                platforms to inspire others, share encouraging words,
+                and promote kindness.
+            </p>
+
+        </section>
+
+        <section class="info-card">
+
+            <h2>2. Sharing Spiritual Messages Online</h2>
+
+            <p>
+                Through technology, we can share Bible verses, inspirational
+                messages, prayers, and reminders of faith. These simple posts
+                may encourage someone who is facing challenges or needs hope.
+            </p>
+
+        </section>
+
+        <section class="info-card">
+
+            <h2>3. Faith in My Digital Life</h2>
+
+            <p>
+                As a student, I believe that my values should guide the way
+                I use technology. I want to use my knowledge and skills
+                not only for personal success but also to create something
+                meaningful and helpful to others.
+            </p>
+
+        </section>
+
+
+        <div class="faith-message">
+
+            <h2>My Personal Commitment</h2>
+
+            <p>
+                I will choose to use technology with honesty, kindness,
+                and responsibility. I will think before I post, respect
+                other people, and use digital platforms to share positive
+                and meaningful content. Above all, I will remember to put
+                God first in everything I do.
+            </p>
+
+        </div>
+
+        <div class="closing">
+
+            <h1>BE A LIGHT IN THE DIGITAL WORLD</h1>
+
+            <p>
+                Technology gives us the power to connect with the world,
+                but our faith and values guide us in using that power wisely.
+                Let us use every opportunity to spread kindness, share truth,
+                inspire others, and make a positive difference.
+            </p>
+
+            <br>
+
+            <h3>INTEGRITY• COMPASSION • EXCELLENCE</h3>
+
+            <p>
+                <em>SA TANGUB CITY, UNA ANG GINOO.</em>
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <h3>UNA ANG GINOO</h3>
+
+        <p>All Rights Reserved © 2026</p>
+
+        <p>CIC 111 | Institute of Computer Studies</p>
+
+    </footer>
+
+</body>
+</html>

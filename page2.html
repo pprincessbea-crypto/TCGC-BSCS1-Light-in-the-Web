@@ -1,0 +1,556 @@
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Light in the Web | Personal Reflection</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background: #f3f8f0;
+                color: #344536;
+                line-height: 1.6;
+            }
+            
+            header {
+                background: #315b3b;
+                color: white;
+                padding: 20px 7%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            header h2 {
+                letter-spacing: 2px;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                gap: 18px;
+                overflow-x: auto;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #fdfffe;
+                font-weight: bold;
+                white-space: nowrap;
+                font-size: 14px;
+                transition: 0.3s;
+            }
+
+            nav a:hover {
+                color: #b9d9b2;
+                transform: translateY(-2px);
+            }
+
+            .page-heading {
+                text-align: center;
+                padding: 45px 20px 25px;
+            }
+
+            .page-heading h1 {
+                color: #315b3b;
+                font-size: 36px;
+                margin: 10px 0;
+            }
+
+            .page-heading p {
+                color: #647564;
+            }
+
+            .verse {
+                font-style: italic;
+                margin-top: 15px;
+                color: #557451;
+            }
+
+            .content-layout {
+                max-width: 1200px;
+                margin: 25px auto 60px;
+                padding: 0 25px;
+                display: grid;
+                grid-template-columns: 2.2fr 0.8fr;
+                gap: 25px;
+                align-items: start;
+            }
+
+            .reflection-content {
+                min-width: 0;
+            }
+
+            .reflection-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 18px;
+            }
+
+            .reflection-card {
+                background: white;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+                transition: 0.3s;
+            }
+
+            .reflection-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .reflection-card img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+            }
+
+            .reflection-card .card-text {
+                padding: 18px;
+            }
+
+            .reflection-card h3 {
+                color: #315b3b;
+                margin-bottom: 10px;
+            }
+
+            .reflection-card p {
+                font-size: 14px;
+                color: #586658;
+            }
+
+            .little-reflection {
+                background: #e3efdd;
+                padding: 25px;
+                border-radius: 15px;
+                margin-top: 25px;
+            }
+
+            .little-reflection h2 {
+                color: #315b3b;
+                margin-bottom: 10px;
+            }
+
+            .little-reflection p {
+                color: #526452;
+            }
+
+            .personal-values {
+                margin-top: 30px;
+            }
+
+            .personal-values h2 {
+                color: #315b3b;
+                text-align: center;
+                margin-bottom: 18px;
+                letter-spacing: 1px;
+            }
+
+            .values-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+            }
+
+            .value-card {
+                background: white;
+                padding: 20px 12px;
+                text-align: center;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+                transition: 0.3s;
+            }
+
+            .value-card:hover {
+                transform: translateY(-5px);
+                background: #eaf3e5;
+            }
+
+            .value-icon {
+                font-size: 30px;
+                margin-bottom: 8px;
+            }
+
+            .value-card h3 {
+                color: #315b3b;
+                margin-bottom: 6px;
+                font-size: 16px;
+            }
+
+            .value-card p {
+                font-size: 12px;
+                color: #586658;
+            }
+
+            /* INSPIRATIONAL QUOTE */
+
+            .inspiration-quote {
+                background: white;
+                border-left: 5px solid #73906c;
+                padding: 22px;
+                margin-top: 25px;
+                border-radius: 12px;
+                text-align: center;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            }
+
+            .inspiration-quote p {
+                color: #526452;
+                font-style: italic;
+                font-size: 15px;
+            }
+
+            .inspiration-quote h3 {
+                color: #315b3b;
+                margin-bottom: 10px;
+            }
+
+            /* ABOUT ME - RIGHT SIDE */
+
+            .about-me {
+                background: white;
+                padding: 22px;
+                border-radius: 18px;
+                box-shadow: 0 5px 18px rgba(0,0,0,0.09);
+                text-align: center;
+            }
+
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 5px solid #d8e9d0;
+                margin-bottom: 15px;
+            }
+
+            .about-me h2 {
+                color: #315b3b;
+                margin-bottom: 5px;
+            }
+
+            .course {
+                color: #73906c;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .personal-details {
+                text-align: left;
+                margin: 20px 0;
+                font-size: 14px;
+            }
+
+            .personal-details p {
+                margin-bottom: 9px;
+            }
+
+            .about-intro {
+                font-size: 14px;
+                color: #586658;
+                margin: 15px 0;
+                text-align: left;
+            }
+
+            .motto-box {
+                background: #eaf3e5;
+                padding: 18px;
+                border-radius: 12px;
+                margin-top: 20px;
+            }
+
+            .motto-box h3 {
+                color: #315b3b;
+                margin-bottom: 10px;
+            }
+
+            .motto {
+                font-weight: bold;
+                color: #47734a;
+                font-style: italic;
+                margin-bottom: 10px;
+            }
+
+            .motto-box p {
+                font-size: 13px;
+                color: #586658;
+                text-align: left;
+            }
+
+            .closing {
+                text-align: center;
+                padding: 25px;
+                color: #315b3b;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            footer {
+                background: #315b3b;
+                color: white;
+                text-align: center;
+                padding: 22px;
+                font-size: 13px;
+            }
+
+            @media (max-width: 1000px) {
+                .content-layout {
+                    grid-template-columns: 1.6fr 1fr;
+                }
+
+                .reflection-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .values-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 700px) {
+                header {
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                nav {
+                    width: 100%;
+                    justify-content: flex-start;
+                }
+
+                .content-layout {
+                    grid-template-columns: 1fr;
+                }
+
+                .reflection-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .values-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .about-me {
+                    max-width: 500px;
+                    width: 100%;
+                    margin: auto;
+                }
+
+                .page-heading h1 {
+                    font-size: 29px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h2>LIGHT IN THE WEB</h2>
+
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="Untitled-1.html">REFLECTION</a>
+                <a href="page3.html">ADVOCACY</a>
+                <a href="page4.html">PORTFOLIO</a>
+                <a href="page5.html">MORE</a>
+                <a href="index.html">LOG OUT</a>
+            </nav>
+        </header>
+
+        <section class="page-heading">
+            <h1>PERSONAL REFLECTION</h1>
+            <p>My Faith, My Values, My Digital World</p>
+
+            <div class="verse">
+                "Let your light shine before others." — Matthew 5:16
+            </div>
+        </section>
+
+        <main class="content-layout">
+
+
+            <section class="reflection-content">
+
+                <div class="reflection-grid">
+
+                    <div class="reflection-card">
+                        <img src="church.jpg" alt="Open Bible">
+
+                        <div class="card-text">
+                            <h3>Putting God First</h3>
+                            <p>
+                                I believe that putting God first helps me make better decisions in life.
+                                Through prayer and faith, I find strength and guidance whenever I face challenges.
+                                I want to remember that no matter how busy life becomes, I should always make time for God.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reflection-card">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80" alt="Notebook and pen">
+
+                        <div class="card-text">
+                            <h3>Choosing Honesty Every Day</h3>
+                            <p>
+                                Honesty is important because it builds trust and shows respect for others.
+                                I want to practice being truthful in my words and actions, even when doing the right thing is difficult.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="reflection-card">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80" alt="Person using laptop">
+
+                        <div class="card-text">
+                            <h3>Being Responsible Online</h3>
+                            <p>
+                                Technology is useful, but we should know how to use it responsibly.
+                                Before posting or sharing anything, I should think about its effects on other people.
+                                I want to use the internet to spread kindness and positivity.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="little-reflection">
+                    <h2>A Little Reflection</h2>
+
+                    <p>
+                        As a student, I am still learning and discovering who I want to become.
+                        I know that I will experience mistakes, struggles, and challenges along the way.
+                        But with faith, honesty, and determination, I believe I can become a better person.
+                        I want my actions, both in real life and online, to reflect the values I believe in.
+                    </p>
+                </div>
+
+                <section class="personal-values">
+
+                    <h2>MY PERSONAL VALUES</h2>
+
+                    <div class="values-grid">
+
+                        <div class="value-card">
+                            <div class="value-icon">🙏</div>
+                            <h3>Faith</h3>
+                            <p>
+                                Keeping God at the center of my life and trusting His plans.
+                            </p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🤍</div>
+                            <h3>Honesty</h3>
+                            <p>
+                                Choosing truth in my words and actions.
+                            </p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <h3>Growth</h3>
+                            <p>
+                                Learning from my mistakes and experiences.
+                            </p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">💚</div>
+                            <h3>Kindness</h3>
+                            <p>
+                                Treating others with respect and compassion.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <div class="inspiration-quote">
+
+                    <h3>A Reminder to Myself</h3>
+
+                    <p>
+                        "I may not have everything figured out yet, but I trust the process,
+                        keep my faith, and continue working toward the person I want to become."
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <aside class="about-me">
+
+                <img src="me.jpg" alt="My Profile Picture" class="profile-picture">
+
+                <h2>Princess Bea Jueves Pardillo</h2>
+                <p class="course">BS Computer Science • First Year</p>
+
+                <div class="personal-details">
+                    <p><strong>School:</strong> Tangub City Global College</p>
+                    <p><strong>Academic Year:</strong> 2026–2027</p>
+                    <p><strong>Course:</strong> Bachelor of Science in Computer Science</p>
+                </div>
+
+                <div class="about-intro">
+                    <p>
+                        Hi! I am a first-year college student who is still learning,
+                        growing, and discovering new things about myself.
+                        I believe that every experience teaches me something valuable.
+                        I want to improve my skills, reach my goals, and become a person
+                        who inspires others through kindness and determination.
+                    </p>
+                </div>
+
+                <div class="motto-box">
+
+                    <h3>Motto in Life</h3>
+
+                    <div class="motto">
+                        "Fall seven times, stand up eight."
+                    </div>
+
+                    <p>
+                        This motto reminds me that life is full of challenges, failures,
+                        and unexpected situations. Even when I fall or make mistakes,
+                        I should never give up. Every failure is a lesson that helps me
+                        become stronger, wiser, and better. No matter how difficult life
+                        gets, I will always choose to stand up, keep going, and try again.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+
+        <div class="closing">
+            LET YOUR LIGHT SHINE!<br>
+            Choose kindness. Share truth. Be the light of the world.
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+            <p>UNA ANG GINOO</p>
+            <p>All Rights Reserved © 2026</p>
+            <p>CIC 111 | Institute of Computer Studies</p>
+        </footer>
+
+</body>
+</html>
